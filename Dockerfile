@@ -1,5 +1,7 @@
 FROM php:alpine3.11
 
+COPY php.ini $PHP_INI_DIR/php.ini
+
 RUN apk --update add git less openssh && \
     mkdir /app && \
     cd /app && \
